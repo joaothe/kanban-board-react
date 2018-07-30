@@ -1,0 +1,72 @@
+.tinge-green{
+  color: #14C056;
+}
+
+.space-direction {
+  padding-top: 38px;
+  padding-left: 45px;
+}
+
+.hide-new-task {
+  display: none;
+}
+
+.kanban-column {
+  width: 225px;
+  margin-bottom: 5px;
+	margin-right: 5px;
+  padding-left: 5px;
+  vertical-align: top;
+  padding-top: 0px;
+  background-color: #14C056;
+  display: inline-block;
+	text-align: center;
+}
+
+.kanban-column h3 {
+  color: #fff;
+}
+
+.kanban-column input {
+  margin-bottom: 5px;
+  border-color: #2eb2ff;
+  background-color: #FAF0E6;
+}
+
+.kanban-column .cancel-task{
+  background-color: #ff3333;
+  border-color: #ff3333;
+}
+
+button{
+  background-color: #2eb2ff;
+  border-color: #2eb2ff;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.card-style {
+  padding-top: 5px;
+  margin-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 0px;
+  background-color: #f9f7f7;
+  margin-left: 0px;
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
+
+.card-style span {
+  font-weight: bolder;
+}
+
+.card-style h4, span {
+  color: #14C056;
+}
+
+.card-style small {
+  font-size: 14px;
+  word-break: break-all;
+}
