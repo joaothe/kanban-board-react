@@ -4,7 +4,7 @@ import Column from './Column'
 
 class Board extends React.Component {
 	constructor(props) {
-		super(props);
+		super(props)
 		this.state = ({
 			isLoading: true,
 			dragCol: 0,
@@ -45,19 +45,19 @@ class Board extends React.Component {
 					task_stage: 4
 				},
 			],
-		});
+		})
 
-		this.setField = this.setField.bind(this);
-		this.createTask = this.createTask.bind(this);
-		this.handleDragEnter = this.handleDragEnter.bind(this);
-		this.handleDragEnd = this.handleDragEnd.bind(this);
+		this.setField = this.setField.bind(this)
+		this.createTask = this.createTask.bind(this)
+		this.handleDragEnter = this.handleDragEnter.bind(this)
+		this.handleDragEnd = this.handleDragEnd.bind(this)
 
 
 		this.item = {
 				name: '',
 				description: '',
 				task_stage: 1
-			};	
+			}	
 			
 	
 
@@ -67,56 +67,40 @@ class Board extends React.Component {
 			{name: 'In Progress', stage: 3},
 			{name: 'Testing', stage: 4},
 			{name: 'Done', stage: 5},
-		];
+		]
 	}
 
 	componentWillMount() {
-		this.setState({isLoading: false });
+		this.setState({isLoading: false })
 	}
 
 	
 	handleDragEnter(e, stageVal) {
-		this.setState({ dragCol: stageVal });
+		this.setState({ dragCol: stageVal })
 	}
 
 	createTask = () => {
-		
 		if(this.item.name){
-
 			this.setState({
 				tasks: [...this.state.tasks, this.item]
 			})
-
 		}
-		
-		
 	}
 
 	setField = (e, val) => {
-
-		/*if(e){
-		this.setState({
-			item: {...this.state.item, [e.target.name] : e.target.value}
-		})
-		}*/
-
 		this.item = {...this.item, 
 			[e.target.name]: e.target.value,
 			task_stage: val
 		}
-		
-		//console.log(this.item);
 	}
-
 	
 	handleDragEnd(e, task) {
-		const updatedTasks = [...this.state.tasks];
-		updatedTasks.find((obj) => { return obj.name === task.name; }).task_stage = this.state.dragCol;
-		this.setState({ tasks: updatedTasks });
+		const updatedTasks = [...this.state.tasks]
+		updatedTasks.find((obj) => { return obj.name === task.name }).task_stage = this.state.dragCol
+		this.setState({ tasks: updatedTasks })
 	}
 
 	render() {
-
 		if (this.state.isLoading) {
 			return (<h4>Keep calm, Loading...</h4>);
 		}
@@ -135,7 +119,7 @@ class Board extends React.Component {
 							setField={this.setField}
 							key={ column.stage }
 						/>
-					);
+					)
 				})}
       </div>
 		);

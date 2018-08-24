@@ -7,25 +7,23 @@ class Column extends React.Component {
 		this.state = ({ 
 			mouseHover: false,
 			hideButtons: true,
-		});
-
-		
+		})		
 	}
 
 	componentWillReceiveProps(nextProps) {
-		this.state = ({ mouseHover: false, hideButtons: true });
+		this.state = ({ mouseHover: false, hideButtons: true })
 	}
 
 	createCards() {
-		const tasks = [...this.props.tasks];
+		const tasks = [...this.props.tasks]
 		return tasks.map((task) => {
 			return (
 				<Card
 					task={task}
 					onDragEnd={this.props.onDragEnd}
 				/>
-			);
-		});
+			)
+		})
 	}
 
 	render() {
